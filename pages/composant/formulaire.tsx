@@ -2,7 +2,8 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
   name: string;
-  nameRequired: string;
+  phone: number;
+  value: "string";
 };
 
 export default function Formulaire() {
@@ -15,8 +16,6 @@ export default function Formulaire() {
 
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
-  console.log(watch("name"));
-
   return (
     <>
       <form
@@ -25,12 +24,34 @@ export default function Formulaire() {
       >
         <input
           placeholder="Prenom"
-          {...register("name")}
-          className="border rounded-lg p-2 text-center"
+          {...register("name", { minLength: 3, maxLength: 10, required: true })}
+          className="border rounded-lg p-2 mt-2"
         />
+        {errors.name && (
+          <p>
+            Prénom obligatoir minimun 3 lettres et ne dois pas dépasser 10
+            lettre
+          </p>
+        )}
+        <input
+          placeholder="Numéro de téléphone"
+          type="tel"
+          {...register("phone", {
+            maxLength: 10,
+            required: true,
+            valueAsNumber: true,
+            pattern: { value: "(0|\\+33|0033)[1-9][0-9]{8}" },
+          })}
+          className="border rounded-lg p-2 mt-2"
+        />
+        {errors.phone && (
+          <p>
+            Numéro téléphone obligatoire et ne dois pas dépasser 10 chiffres
+          </p>
+        )}
         <button
           type="submit"
-          className="mt-2 pl-4 pr-4 grid text-gray-700 place-items-center rounded rounded-ml border-2 border-gray"
+          className="mt-2 pl-4 pr-4 grid text-gray-900 place-items-center rounded rounded-lg border-2 border-{#06a77d}"
         >
           Envoyer
         </button>
@@ -38,3 +59,4 @@ export default function Formulaire() {
     </>
   );
 }
+[];
