@@ -1,12 +1,13 @@
+import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
   name: string;
-  phone: number;
-  value: "string";
+  phone: string;
 };
 
 export default function Formulaire() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -14,7 +15,14 @@ export default function Formulaire() {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const { name, phone } = data;
+    const addZero = phone.toString().padStart(2, "0");
+    return router.push({
+      pathname: "/commande",
+      query: { name, phone: addZero },
+    });
+  };
 
   return (
     <>
@@ -39,8 +47,6 @@ export default function Formulaire() {
           {...register("phone", {
             maxLength: 10,
             required: true,
-            valueAsNumber: true,
-            pattern: { value: "(0|\\+33|0033)[1-9][0-9]{8}" },
           })}
           className="border rounded-lg p-2 mt-2"
         />

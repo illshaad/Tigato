@@ -13,14 +13,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="grid h-screen place-items-center">
-        <div className="h-80 p-6 border-{#005377} bg-[#005377] rounded-lg">
-          <h2 className="mb-2 text-3xl font-bold text-center tracking-tight text-gray-900">
+        <div className="h-80 p-6 border-{#475B63} bg-[#475B63] rounded-lg">
+          <h2 className="mb-2 text-3xl font-bold text-center tracking-tight text-[#f3e8ee]">
             Tigato
           </h2>
-          <p className="mb-2 text-center font-normal text-gray-900">
-            Pour continuer veuillez indiquer votre prénom
+          <p className="mb-2 text-center font-normal text-[#f3e8ee]">
+            Pour continuer merci indiquer votre prénom
           </p>
-          <p className="p-4 text-xs align-bottom  text-center font-normal text-gray-900">
+          <p className="p-4 text-xs align-bottom  text-center font-normal text-[#f3e8ee]">
             Votre prénom nous serviron à vous contacter pour la réservation de
             votre commande
           </p>

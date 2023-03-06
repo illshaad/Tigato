@@ -1,0 +1,58 @@
+[
+  {
+    "type": "Sucrée",
+    "name": "Napolitaine",
+    "description": "Ce gâteau est composé de plusieurs couches de génoise, alternant entre des couches de vanille, de chocolat et de fraise. La génoise est légère et moelleuse, avec une texture aérée qui permet aux saveurs de chaque couche de se marier parfaitement. La couche de vanille est douce et crémeuse, tandis que la couche de chocolat est riche et corsée. La couche de fraise apporte une touche de fraîcheur et de légèreté, ainsi qu'une belle couleur rose.",
+    "price": "2"
+  },
+  {
+    "type": "Sucrée",
+    "name": "Puits d'Amour",
+    "description": "Le gâteau Puits d'Amour est une délicieuse pâtisserie typique de l'île Maurice. Il se compose d'une croûte de pâte feuilletée croustillante, garnie d'une crème pâtissière onctueuse et parfumée à la vanille. La croûte de pâte est traditionnellement en forme de petit cercle avec un petit trou au milieu, d'où son nom",
+    "price": "2"
+  },
+  {
+    "type": "Sucrée",
+    "name": "Tarte banane",
+    "description": "La tarte banane est une pâtisserie traditionnelle de l'île Maurice, qui allie la douceur de la banane à la richesse d'une croûte de pâte sablée. La tarte est généralement garnie de bananes mûres et tranchées, disposées sur un lit de crème pâtissière ou de caramel.",
+    "price": "2"
+  },
+  {
+    "type": "Sucrée",
+    "name": "Lamington",
+    "description": "C'est un gâteau moelleux et aéré, recouvert d'un glaçage chocolaté et de noix de coco râpée.",
+    "price": "2"
+  },
+  {
+    "type": "Sucrée",
+    "name": "Ladoo",
+    "description": "Le Ladoo est un délicieux gâteau traditionnel de l'île Maurice, qui est souvent préparé pour les fêtes et les célébrations. Ce petit gâteau sphérique est généralement fait à partir de farine de pois chiche, de sucre, de beurre clarifié (ghee), de cardamome, de noix de coco râpée et d'amandes.",
+    "price": "2"
+  },
+  {
+    "type": "Salé",
+    "name": "Pâté thon",
+    "description": "Ce gâteau se compose d'une pâte feuilletée croustillante, fourrée d'une garniture épicée à base de thon, d'oignons, de piments, d'ail, de gingembre et de coriandre. La garniture est préparée en faisant sauter les ingrédients ensemble dans de l'huile, puis en laissant mijoter jusqu'à ce qu'elle soit bien cuite",
+    "price": "2"
+  },
+  {
+    "type": "Salé",
+    "name": "Catless",
+    "description": "Ce gâteau est préparé à partir d'une pâte à base de farine, d'eau, de sel et d'huile, qui est étalée finement et coupée en petits cercles. La pâte est ensuite frite dans de l'huile chaude jusqu'à ce qu'elle soit dorée et croustillante.",
+    "variante": "Boeuf - Poulet",
+    "price": "2"
+  },
+  {
+    "type": "Salé",
+    "name": "Sammoussa",
+    "description": "Le Samoussa est préparé à partir d'une pâte à base de farine de blé, d'eau et de sel, qui est étalée finement et coupée en petits cercles. La pâte est ensuite pliée en forme de triangle et remplie d'une garniture épicée à base de légumes, de viande hachée ou de fromage.",
+    "variante": "Boeuf - Poulet - Poisson",
+    "price": "2"
+  },
+  {
+    "type": "Salé",
+    "name": "Half Moon",
+    "description": "Le gâteau Half Moon est une spécialité culinaire populaire de l'île Maurice, souvent servie comme collation ou en accompagnement d'un repas principal. Ce petit gâteau salé en forme de demi-lune ressemble à un petit chausson.",
+    "price": "2"
+  }
+]
