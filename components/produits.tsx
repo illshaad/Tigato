@@ -1,10 +1,25 @@
 import React from "react";
-
 import { useRouter } from "next/router";
+import { useForm, SubmitHandler } from "react-hook-form";
 import InputProduct from "./inputProduct";
-import { useForm } from "react-hook-form";
 
-export default function Produits({ products, titre }) {
+type Inputs = {
+  name: string;
+};
+
+export default function Produits({
+  products,
+  titre,
+}: {
+  products: {
+    type: string;
+    name: string;
+    price: number;
+    variante?: string;
+    redirect: string;
+  };
+  titre: string;
+}) {
   const {
     register,
     handleSubmit,

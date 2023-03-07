@@ -1,4 +1,6 @@
-export default function inputProduct({ name, register }) {
+import React from "react";
+
+export default function InputProduct({ name, register }: { name: string }) {
   return (
     <>
       <input

@@ -33,7 +33,7 @@ export default function Formulaire() {
         <input
           placeholder="Prenom"
           {...register("name", { minLength: 3, maxLength: 10, required: true })}
-          className="border rounded-lg p-2 mt-2"
+          className="border-2 rounded-lg p-2 mt-2"
         />
         {errors.name && (
           <p className="font-tilt-warp text-color-600">
@@ -45,6 +45,7 @@ export default function Formulaire() {
           placeholder="Numéro de téléphone"
           type="tel"
           {...register("phone", {
+            minLength: 0,
             maxLength: 10,
             required: true,
           })}

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Formulaire from "../composant/formulaire";
+import Formulaire from "../components/formulaire";
 
 export default function Home() {
   return (
