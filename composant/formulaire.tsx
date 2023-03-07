@@ -36,7 +36,7 @@ export default function Formulaire() {
           className="border rounded-lg p-2 mt-2"
         />
         {errors.name && (
-          <p>
+          <p className="font-tilt-warp text-color-600">
             Prénom obligatoir minimun 3 lettres et ne dois pas dépasser 10
             lettre
           </p>
@@ -51,13 +51,13 @@ export default function Formulaire() {
           className="border rounded-lg p-2 mt-2"
         />
         {errors.phone && (
-          <p>
+          <p className="font-tilt-warp text-color-600">
             Numéro téléphone obligatoire et ne dois pas dépasser 10 chiffres
           </p>
         )}
         <button
           type="submit"
-          className="mt-2 pl-4 pr-4 grid text-gray-900 place-items-center rounded rounded-lg border-2 border-{#06a77d}"
+          className="mt-2 pl-4 pr-4 grid text-gray-900 font-tilt-warp place-items-center rounded rounded-lg border-2 border-{#06a77d}"
         >
           Envoyer
         </button>
@@ -65,4 +65,3 @@ export default function Formulaire() {
     </>
   );
 }
-[];
