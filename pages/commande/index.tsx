@@ -1,9 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
-import products from "../../data/products.json";
-import Menu from "../../components/menu";
-import Produits from "../../components/produits";
-import Presentation from "../../components/presentation";
+import products from "@/data/products.json";
+import Menu from "@/components/menu";
+import Produits from "@/components/produits";
+import Presentation from "@/components/presentation";
+import Reservation from "@/components/reservation";
 
 export default function Commande() {
   const router = useRouter();
@@ -15,8 +16,11 @@ export default function Commande() {
     <div>
       <Menu name={name} />
       <Presentation />
-      <Produits products={sucrer} titre="NOS SPECIALITER SUCRER" />
-      <Produits products={saler} titre="NOS SPECIALITER SALER" />
+      <Produits products={sucrer} titre="NOS SPECIALITES SUCRER" />
+      <Produits products={saler} titre="NOS SPECIALITES SALER" />
+      <div className="pt-6 grid place-items-center">
+        <Reservation router={router} />
+      </div>
     </div>
   );
 }

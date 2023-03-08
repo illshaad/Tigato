@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-
 export default function Presentation() {
   return (
     <div className="p-10 flex justify-around">

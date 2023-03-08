@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { useData } from "../context/context";
 import { useForm, SubmitHandler } from "react-hook-form";
 import InputProduct from "./inputProduct";
 
@@ -21,10 +22,11 @@ export default function Produits({
   titre: string;
 }) {
   const {
-    register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
+
+  const { information } = useData();
 
   const router = useRouter();
 
@@ -48,11 +50,14 @@ export default function Produits({
         onSubmit={handleSubmit(onSubmit)}
         className="flex justify-center gap-4"
       >
-        {products?.map(({ type, name, price, redirect }, key) => (
+        {products?.map(({ type, name, price, redirect, quantity, id }, key) => (
           <div
             key={"test"}
-            className="shadow-lg  h-80 w-60 p-1 border-cyan-900 border-2 rounded-bl-lg rounded-tr-lg "
+            className="shadow-lg h-80 w-60 p-1 border-cyan-900 border-2 rounded-bl-lg rounded-tr-lg "
           >
+            <div className="bg-cyan-900 text-white w-6 h-6 text-center align-center text-sm rounded rounded-full">
+              {information.find((f) => f.products.id === id)?.quantity}
+            </div>
             <div className="grid grid-cols-1 divide-y">
               <h2 className="p-6 text-center font-tilt-warp font-bold text-1xl text-gray-700">
                 Type {type}
@@ -70,9 +75,13 @@ export default function Produits({
             >
               Vers la description
             </div>
-            <div className="">
-              <InputProduct name={redirect} register={register} />
-            </div>
+            <InputProduct
+              type={type}
+              name={name}
+              price={price}
+              id={id}
+              quantity={quantity}
+            />
           </div>
         ))}
       </form>

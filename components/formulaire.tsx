@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-
 type Inputs = {
   name: string;
   phone: string;
@@ -11,7 +10,6 @@ export default function Formulaire() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
 
