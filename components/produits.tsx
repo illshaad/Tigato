@@ -21,10 +21,7 @@ export default function Produits({
   };
   titre: string;
 }) {
-  const {
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
+  const { handleSubmit } = useForm<Inputs>();
 
   const { information } = useData();
 
@@ -38,7 +35,7 @@ export default function Produits({
   };
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+    console.log(data); //RESERVATON
   };
 
   return (
@@ -55,9 +52,10 @@ export default function Produits({
             key={"test"}
             className="shadow-lg h-80 w-60 p-1 border-cyan-900 border-2 rounded-bl-lg rounded-tr-lg "
           >
-            <div className="bg-cyan-900 text-white w-6 h-6 text-center align-center text-sm rounded rounded-full">
+            <div className=" shadow-lg bg-cyan-600 text-white w-6 h-6 text-center align-center text-sm rounded rounded-full">
               {information.find((f) => f.products.id === id)?.quantity}
             </div>
+
             <div className="grid grid-cols-1 divide-y">
               <h2 className="p-6 text-center font-tilt-warp font-bold text-1xl text-gray-700">
                 Type {type}

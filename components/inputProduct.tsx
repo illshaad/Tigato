@@ -20,12 +20,12 @@ export default function InputProduct({
   };
   const createNewAarray = (products) => {
     setInformation((prev) => {
-      const index = prev.findIndex((f) => f.products.id === products.id);
+      const index = prev.findIndex((f) => f.products.id === products.id); // Get index element
       if (index !== -1) {
-        prev[index].quantity = quantity;
-        return [...prev];
+        prev[index].quantity = quantity; // change value quantity prevSatate
+        return [...prev]; // return new state
       } else {
-        return [...prev, { products, quantity }];
+        return [...prev, { products, quantity }]; // return old state any modificated
       }
     });
   };
