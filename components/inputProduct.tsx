@@ -13,7 +13,7 @@ export default function InputProduct({
   quantity: number;
   id: number;
 }) {
-  const { setInformation, information } = useData();
+  const { setInformation } = useData();
 
   const handleChange = (event) => {
     quantity = parseInt(event.target.value, 10);
@@ -25,7 +25,7 @@ export default function InputProduct({
         prev[index].quantity = quantity; // change value quantity prevSatate
         return [...prev]; // return new state
       } else {
-        return [...prev, { products, quantity }]; // return old state any modificated
+        return [...prev, { products, quantity }]; // return old state any modificate
       }
     });
   };
