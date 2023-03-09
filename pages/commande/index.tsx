@@ -10,15 +10,15 @@ import Image from "next/image";
 import Rappel from "@/components/rappel";
 
 export default function Commande() {
-  const { commandeForReservation, information } = useData();
+  const { commandeForReservation, information, setInformation } = useData();
   const router = useRouter();
   const { name, phone }: { name: string; phone: string } = router.query;
   const sucrer = products.filter((f) => f.type === "Sucrée");
   const saler = products.filter((f) => f.type === "Salé");
 
   return (
-    <div className="flex">
-      <div className="p-4 ">
+    <div className="flex h-[100vh] justify-between">
+      <div className="p-8">
         <Menu name={name} />
         <Presentation />
         <Produits products={sucrer} titre="NOS SPECIALITES SUCRER" />
@@ -31,11 +31,21 @@ export default function Commande() {
               name={name}
               router={router}
               information={information}
+              setInformation={setInformation}
+              commandeForReservation={commandeForReservation}
             />
           </div>
         )}
       </div>
-      <Image src="/apples.jpg" alt="photo" width={600} height={600} />
+      <div>
+        <Image
+          src="/apples.jpg"
+          className="h-full"
+          alt="photo"
+          width={900}
+          height={800}
+        />
+      </div>
     </div>
   );
 }

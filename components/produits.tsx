@@ -22,7 +22,7 @@ export default function Produits({
 }) {
   const { handleSubmit } = useForm<Inputs>();
 
-  const { information, commandeForReservation } = useData();
+  const { information } = useData();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data); //RESERVATON
@@ -30,7 +30,7 @@ export default function Produits({
 
   return (
     <div>
-      <div className="p-2 my-8 text-center font-bold text-1xl border-2 border-cyan-900 rounded-full w-80 font-tilt-warp shadow-xl bg-cyan-900 text-white">
+      <div className=" mt-6 mb-6 text-center font-bold text-xs border-2 border-cyan-900 rounded-full w-60 font-tilt-warp shadow-xl bg-cyan-900 text-white">
         {titre}
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="flex gap-4">

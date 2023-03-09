@@ -2,7 +2,7 @@ import React from "react";
 export default function Presentation() {
   return (
     <div>
-      <h1 className="text-4xl pt-10 mt-10 font-bold font-tilt-warp text-cyan-900">
+      <h1 className="text-4xl mt-8 font-bold font-tilt-warp text-cyan-900">
         Spécialité traiteur Mauricienne
       </h1>
 
