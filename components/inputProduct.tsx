@@ -42,7 +42,7 @@ export default function InputProduct({
       <button
         onClick={() => createNewAarray({ type, name, price, id })}
         type="submit"
-        className="mt-2 pl-4 pr-4 grid text  gray-900 font-tilt-warp place-items-center rounded rounded-lg border-2 border-{#06a77d}"
+        className="mt-2 pl-4 pr-4 grid text  gray-900 font-tilt-warp place-items-center rounded rounded-lg border-2 border-cyan-900"
       >
         Ajouter
       </button>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { sendMessage } from "@/service/api";
 export default function Reservation({
   router,
   name,
@@ -9,8 +9,15 @@ export default function Reservation({
   commandeForReservation,
 }) {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const { name, phone, information } = data;
+
+    const send = await sendMessage({
+      name,
+      phone,
+      information,
+      commandeForReservation,
+    });
     //Use api send message for phone
     // router.push({
     //   pathname: "/",
@@ -23,7 +30,7 @@ export default function Reservation({
       <button
         type="submit"
         onClick={() => setShowModal(true)}
-        className="p-2 font-bold text-1xl border-2 border-cyan-900 rounded-xl font-tilt-warp shadow-xl bg-cyan-900 text-white"
+        className="p-2 font-bold text-1xl border-2 border-cyan-900 rounded font-tilt-warp shadow-xl bg-cyan-900 text-white"
       >
         Reservation
       </button>
