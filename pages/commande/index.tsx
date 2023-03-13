@@ -12,12 +12,11 @@ import Rappel from "@/components/rappel";
 export default function Commande() {
   const { commandeForReservation, information, setInformation } = useData();
   const router = useRouter();
-  const { name, phone }: { name: string; phone: string } = router.query;
+  const { name, phone } = router.query;
   const sucrer = products.filter((f) => f.type === "Sucrée");
   const saler = products.filter((f) => f.type === "Salé");
-
   return (
-    <div className="flex h-[100vh] justify-between">
+    <div className="flex h-[100vh] justify-center">
       <div className="p-8">
         <Menu name={name} />
         <Presentation />
@@ -25,7 +24,7 @@ export default function Commande() {
         <Produits products={saler} titre="NOS SPECIALITES SALER" />
         <Rappel />
         {commandeForReservation >= 20 && (
-          <div className="flex justify-center my-8 ">
+          <div className="flex justify-center p-6 ">
             <Reservation
               phone={phone}
               name={name}
@@ -37,15 +36,13 @@ export default function Commande() {
           </div>
         )}
       </div>
-      <div>
-        <Image
-          src="/apples.jpg"
-          className="h-full"
-          alt="photo"
-          width={900}
-          height={800}
-        />
-      </div>
+      {/* <Image
+        src="/apples.jpg"
+        className="h-full"
+        alt="photo"
+        width={900}
+        height={800}
+      /> */}
     </div>
   );
 }

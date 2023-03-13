@@ -7,21 +7,25 @@ export default function Reservation({
   information,
   setInformation,
   commandeForReservation,
+}: {
+  name: string;
+  phone: string;
+  commandeForReservation: number;
 }) {
   const [showModal, setShowModal] = useState<boolean>(false);
   const onSubmit = async (data) => {
     const { name, phone, information } = data;
-
-    const send = await sendMessage({
+    // Use api send message for phone
+    await sendMessage({
       name,
       phone,
       information,
       commandeForReservation,
     });
-    //Use api send message for phone
-    // router.push({
-    //   pathname: "/",
-    // });
+
+    router.push({
+      pathname: "/",
+    });
     return setInformation([]) && setShowModal(false);
   };
 
