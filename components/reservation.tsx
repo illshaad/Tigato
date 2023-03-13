@@ -24,7 +24,7 @@ export default function Reservation({
     });
 
     router.push({
-      pathname: "/",
+      pathname: "/finish",
     });
     return setInformation([]) && setShowModal(false);
   };
