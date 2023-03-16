@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Formulaire from "../components/formulaire";
+import Formulaire from "@/components/formulaire";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           <h2 className="mb-2 text-3xl font-bold text-center font-tilt-warp  text-white">
             Tigato
           </h2>
-          <p className="mb-2 text-center font-normal text-white">
+          <p className="mb-2 text-center font-tilt-warp text-white">
             Pour continuer merci indiquer votre prénom
           </p>
           <p className="p-4 text-xs align-bottom text-center font-tilt-warp text-white">

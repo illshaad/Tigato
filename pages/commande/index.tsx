@@ -19,7 +19,10 @@ export default function Commande() {
     <div className="flex h-[100vh] justify-center">
       <div className="p-8">
         <Menu name={name} />
-        <Presentation />
+        <Presentation
+          titre="Spécialité traiteur Mauricienne"
+          sousTitle="La cuisine mauricienne est une fusion de différentes cultures, notamment indienne, africaine, chinoise, créole et française."
+        />
         <Produits products={sucrer} titre="NOS SPECIALITES SUCRER" />
         <Produits products={saler} titre="NOS SPECIALITES SALER" />
         <Rappel />
@@ -35,6 +38,10 @@ export default function Commande() {
             />
           </div>
         )}
+        <Presentation
+          titre="Nous contacter"
+          sousTitle="Pour nous contacter vous pouvez-nous joindre à ce numéro 0612345677"
+        />
       </div>
       {/* <Image
         src="/apples.jpg"

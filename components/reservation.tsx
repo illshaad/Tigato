@@ -68,7 +68,7 @@ export default function Reservation({
                     </thead>
                     <tbody>
                       {information.map((e, key) => (
-                        <tr key="key">
+                        <tr key={key}>
                           <td className="px-12 py-3 text-xs whitespace-nowrap">
                             <p className="my-4 text-grey-900 text-center text-sm font-tilt-warp">
                               {e.products.name}
