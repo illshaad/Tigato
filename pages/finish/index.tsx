@@ -12,7 +12,7 @@ export default function FinishReservation() {
   return (
     <h1 className="text-2xl p-10 font-bold font-tilt-warp text-cyan-900">
       Nous vous contacterons dans les plus briefs délais pour votre réservation.
-      Vous allez être redirigés pour pourvoir prendre une nouvelle commande.
+      Vous allez être redirigés pour pouvoir prendre une nouvelle commande.
       Merci
     </h1>
   );
