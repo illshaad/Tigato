@@ -1,4 +1,4 @@
-# Project Tigato (Maquette) (NextjS/Typscript/NodeJs)
+# Project Tigato (Maquette) (NextjS/Typscript/NodeJs/TailwindCss)
 
 Une application qui permet de recevoir une commande par sms.
 
